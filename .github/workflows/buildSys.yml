@@ -21,3 +21,5 @@ on:
                 npm install -g @vue/cli yarn
                 yarn install
                 yarn build
+
+                
