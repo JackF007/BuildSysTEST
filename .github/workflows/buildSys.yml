@@ -10,12 +10,12 @@ jobs:
   name: Build and Test
   steps:    
         - uses: actions/checkout@master
-            name: Checkout Repo
+          name: Checkout Repo
         - uses: actions/setup-node@v1
-            name: Create Node Environment
-            with: 
-              node-version: 12.x          
-            name: Install Packages and Build Application
+          name: Create Node Environment
+          with: 
+           node-version: 12.x          
+          name: Install Packages and Build Application
         - run: |
             npm install -g @vue/cli yarn
             yarn install
