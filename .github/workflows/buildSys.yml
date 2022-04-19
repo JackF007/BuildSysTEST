@@ -9,10 +9,10 @@ jobs:
   runs-on: ubuntu-latest
   name: Build and Test
   steps:    
-        - name: Checkout Repo
-          uses: actions/checkout@master
-        - name: Create Node Environment
-          uses: actions/setup-node@v1
+        - uses: actions/checkout@master
+          name: Checkout Repo
+        - uses: actions/setup-node@v1
+          name: Create Node Environment
           with: 
             node-version: 12.x          
         - name: Install Packages and Build Application
