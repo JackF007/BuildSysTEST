@@ -1,15 +1,15 @@
 name: CI test
-on:
- push:
- branches: [ dev ]
- pull_request:
- branches: [ dev ]
+  on:
+    push:
+       branches: [ dev ]
+    pull_request:
+      branches: [ dev ]
 
  jobs:
  build:
  runs-on: ubuntu-latest
- name: Build and Test
- steps:
+  name: Build and Test
+    steps:
             - name: Checkout Repo
               uses: actions/checkout@master
             - name: Create Node Environment
