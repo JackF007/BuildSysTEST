@@ -9,12 +9,10 @@ jobs:
   name: Build and Test
   runs-on: ubuntu-latest
     steps:    
-      - name: Checkout Repo
-        uses: actions/checkout@master 
-      - name: Create Node Environment
-        uses: actions/setup-node@v1
-          with: 
-           node-version: 12.x          
+      - uses: actions/checkout@master #Checkout REPO
+      - uses: actions/setup-node@v1  #Create node enviroment
+        with:
+          node-version: 12.x
         - run: |
             npm install -g @vue/cli yarn
             yarn install
