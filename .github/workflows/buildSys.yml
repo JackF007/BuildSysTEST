@@ -6,16 +6,15 @@ on:
       branches: [ dev ]
 jobs:
  build:
-  name: Build and Test
   runs-on: ubuntu-latest
-    steps:    
-      - uses: actions/checkout@master #Checkout REPO
-      - uses: actions/setup-node@v1  #Create node enviroment
-        with:
-          node-version: 12.x
-        - run: |
-            npm install -g @vue/cli yarn
-            yarn install
-            yarn build
-        - name: Build and Test
+  steps:    
+    - uses: actions/checkout@master #Checkout REPO
+    - uses: actions/setup-node@v1  #Create node enviroment
+      with:
+        node-version: 12.x
+    - run: |
+          npm install -g @vue/cli yarn
+          yarn install
+          yarn build
+    - name: Build and Test
 
