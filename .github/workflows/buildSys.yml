@@ -6,13 +6,13 @@ on:
       branches: [ dev ]
 jobs:
  build:
-  runs-on: ubuntu-latest
   name: Build and Test
-  steps:    
-        - uses: actions/checkout@master
-          name: Checkout Repo
-        - uses: actions/setup-node@v1
-          name: Create Node Environment
+  runs-on: ubuntu-latest
+    steps:    
+      - name: Checkout Repo
+        uses: actions/checkout@master 
+      - name: Create Node Environment
+        uses: actions/setup-node@v1
           with: 
            node-version: 12.x          
         - run: |
