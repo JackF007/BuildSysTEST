@@ -1,25 +1,22 @@
 name: CI test
 on:
- push:
- branches: [ dev ]
- pull_request:
- branches: [ dev ]
-
- jobs:
+    push:
+      branches: [ dev ]
+    pull_request:
+      branches: [ dev ]
+jobs:
  build:
- runs-on: ubuntu-latest
- name: Build and Test
- steps:
-            - name: Checkout Repo
-              uses: actions/checkout@master
-            - name: Create Node Environment
-              uses: actions/setup-node@v1
-              with: 
-                node-version: 12.x
-            - name: Install Packages and Build Application
-              run: |
-                npm install -g @vue/cli yarn
-                yarn install
-                yarn build
-            - name: Build and Test
+  runs-on: ubuntu-latest
+  steps:    
+    - name : Checkout REPO
+      uses: actions/checkout@master
+    - name : Create Node enviroment 
+      uses: actions/setup-node@v1
+      with:
+        node-version: 12.x
+    - run: |
+          npm install -g @vue/cli yarn
+          yarn install
+          yarn build
+   
 
